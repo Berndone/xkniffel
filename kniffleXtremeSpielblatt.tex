@@ -1,0 +1,54 @@
+\documentclass[a4paper,11pt]{exam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\N} {\mathbb{N}} 
+\begin{document}
+\begin{center}
+    \Large\bf{KniffleXtreme}
+\end{center}
+\begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    Name                       & Bedingung                                                             & Punkte                                            & Spiel 1 & Spiel 2 & Spiel 3 \\
+    \hline
+    Vielfache von 1            &                                                                       & $\displaystyle\sum_{w_i \in 1\mathbb{N}} w_i$     &         &         &         \\
+    \hline
+    Vielfache von 2            &                                                                       & $\displaystyle\sum_{w_i \in 2\mathbb{N}} w_i$     &         &         &         \\
+    \hline
+    Vielfache von 3            &                                                                       & $\displaystyle\sum_{w_i \in 3\mathbb{N}} w_i$     &         &         &         \\
+    \hline
+    Vielfache von 4            &                                                                       & $\displaystyle\sum_{w_i \in 4\mathbb{N}} w_i$     &         &         &         \\
+    \hline
+    Vielfache von 5            &                                                                       & $\displaystyle\sum_{w_i \in 5\mathbb{N}} w_i$     &         &         &         \\
+    \hline
+    Vielfache von 6            &                                                                       & $\displaystyle\sum_{w_i \in 6\mathbb{N}} w_i$     &         &         &         \\
+    \hline\hline
+    Gesamt                     &                                                                       & $\longrightarrow $                                &         &         &         \\
+    \hline
+    Punktebonus von Vielfachen & Summe der Vielfachen $\approx$ 250                                    & Verdoppeln                                        &         &         &         \\ % TODO: Bestehende Blätter nochmals prüfen.
+    \hline\hline
+    Gesamt oberer Teil         &                                                                       & $\longrightarrow $                                &         &         &         \\
+    \hline\hline
+    Nur Primzahlen             & $\forall\, i \in A: w_i \in P$                                        & $2\cdot \displaystyle\sum_{w_i \in P} w_i$        &         &         &         \\
+    \hline
+    Zweierpasch                &                                                                       & Alle Augen Zählen                                 &         &         &         \\
+    \hline
+    Dreierpasch                &                                                                       & Alle Augen Zählen                                 &         &         &         \\
+    \hline
+    Straße                     & Bei n aufeinanderfolgenden                                            & $10\cdot \frac{n!}{3^{n-4}}$                      &         &         &         \\ % Formel nochmals Prüfen. Idee: n=3 -> 180, n=4 -> 230, n=5: 400
+    \hline
+    Quadratzahlen              &                                                                       & $ (\displaystyle\sum_{w_i \in Q_2} \sqrt{w_i})^2$ &         &         &         \\
+    \hline
+    Kniffel mod x              & $ \exists n \in A \setminus \{1\}: \forall i \in A: w_i \equiv_n = 0$ & $ n \cdot \displaystyle\sum_{i \in A} w_i $       &         &         &         \\
+    \hline
+    \hline
+    Gesamt unterer Teil        &                                                                       & $\longrightarrow$                                 &         &         &         \\
+    \hline\hline
+    Summe                      &                                                                       &                                                   &         &         &         \\
+    \hline
+\end{tabular}
+\newline
+\vfill
+\small{v0.2}
+
+
+\end{document}
