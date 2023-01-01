@@ -1,53 +1,132 @@
 \documentclass[a4paper,11pt]{exam}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage[left=1.8cm, right=1.8cm, top=1cm, bottom = 1cm]{geometry}
 \newcommand{\N} {\mathbb{N}} 
+
 \begin{document}
+
 \begin{center}
-    \Large\bf{KniffleXtreme}
+    \Large\bf{KniffelXtreme}
 \end{center}
+\vspace{0.2cm}
+\noindent \hspace{360pt} {Name: \rule{4cm}{0.2mm}} 
+\vspace{0.2cm}
+\renewcommand{\arraystretch}{1.3}
+\begin{table}[h]
 \begin{tabular}{|l|l|l|l|l|l|}
     \hline
     Name                      & Punkte                                            & Spiel 1 & Spiel 2 & Spiel 3 & Spiel 4 \\
     \hline
-    Vielfache von 1           & $\displaystyle\sum_{w_i \in 1\mathbb{N}} w_i$     &         &         &         &         \\
+    Nur Vielfache von $1$ zählen & $\displaystyle\sum_{\omega_i \in \N_1} \omega_i$     &         &         &         &         \\
     \hline
-    Vielfache von 2           & $\displaystyle\sum_{w_i \in 2\mathbb{N}} w_i$     &         &         &         &         \\
+    Nur Vielfache von $2$ zählen & $\displaystyle\sum_{\omega_i \in \N_2} \omega_i$     &         &         &         &         \\
     \hline
-    Vielfache von 3           & $\displaystyle\sum_{w_i \in 3\mathbb{N}} w_i$     &         &         &         &         \\
+    Nur Vielfache von $3$ zählen & $\displaystyle\sum_{\omega_i \in \N_3} \omega_i$     &         &         &         &         \\
     \hline
-    Vielfache von 4           & $\displaystyle\sum_{w_i \in 4\mathbb{N}} w_i$     &         &         &         &         \\
+    Nur Vielfache von $4$ zählen & $\displaystyle\sum_{\omega_i \in \N_4} \omega_i$     &         &         &         &         \\
     \hline
-    Vielfache von 5           & $\displaystyle\sum_{w_i \in 5\mathbb{N}} w_i$     &         &         &         &         \\
+    Nur Vielfache von $5$ zählen & $\displaystyle\sum_{\omega_i \in \N_5} \omega_i$     &         &         &         &         \\
     \hline
-    Vielfache von 6           & $\displaystyle\sum_{w_i \in 6\mathbb{N}} w_i$     &         &         &         &         \\
+    Nur Vielfache von $6$ zählen & $\displaystyle\sum_{\omega_i \in \N_6} \omega_i$     &         &         &         &         \\
     \hline\hline
-    Gesamt                    & $\longrightarrow $                                &         &         &         &         \\
+    Summe Vielfache                    & $\longrightarrow $                                &         &         &         &         \\
     \hline
-    Gesamt $\geq 250$         & Verdoppeln!                                       &         &         &         &         \\ % TODO: Bestehende Blätter nochmals prüfen.
+    Summe Vielfache $\geq 250$ \hspace{2pt}?         & $\rightarrow$  Verdoppeln !  &         &         &         &         \\ 
     \hline\hline
-    Gesamt oberer Teil        & $\longrightarrow $                                &         &         &         &         \\
-    \hline\hline
+  % Gesamt oberer Teil        & $\longrightarrow $                                &         &         &         &         \\
+
+    \hline
+    \hline
     \begin{tabular}{l} $\forall\, i \in A: w_i \in P$ \\ (Nur Primzahlen) \end{tabular} & $2\cdot \displaystyle\sum_{w_i \in P} w_i$        &         &         &         &         \\
     \hline
-    Zweierpasch               & Alle Augen Zählen                                 &         &         &         &         \\
+    Zweierpasch               & Augensumme                                 &         &         &         &         \\
     \hline
-    Dreierpasch               & Alle Augen Zählen                                 &         &         &         &         \\
+    Dreierpasch               & Augensumme                                 &         &         &         &         \\
     \hline
-    Straße über n Würfel      & $10\cdot \frac{n!}{3^{n-4}}$                      &         &         &         &         \\ % Formel nochmals Prüfen. Idee: n=3 -> 180, n=4 -> 230, n=5: 400
+    Straße über $n$ Würfel, $n\geq3$      & $10\cdot n! \cdot 3^{4-n}$                      &         &         &         &         \\ % Formel nochmals Prüfen. Idee: n=3 -> 180, n=4 -> 230, n=5: 400
     \hline
-    Quadratzahlen             & $ (\displaystyle\sum_{w_i \in Q_2} \sqrt{w_i})^2$ &         &         &         &         \\
+    \begin{tabular}{l}  Wachstumsfolge $F$ über $n =|F|\geq 3$ Würfel \\ 
+    $n\geq 3: \exists i,j,k\in F: \omega_i + \omega_j = \omega_k$\\ 
+    $n\geq 4: \exists l \in F, l \notin 
+    \{i,j,k\}:\omega_j+\omega_k =\omega_l$\\
+    $n\geq 5: \exists m \in F, m \notin 
+    \{i,j,k,l\}: \omega_k +\omega_l =\omega_m $\\
+    \end{tabular} & $ n \cdot ( 20 + \displaystyle\sum_{i \in F} w_i )$       &         &         &         &         \\
     \hline
-    \begin{tabular}{l}$ \exists n \in A \setminus \{1\}: \forall i \in A: w_i \in n\N$ \\ (Kniffel mod x)\end{tabular} & $ n \cdot \displaystyle\sum_{i \in A} w_i $       &         &         &         &         \\
+    Quadratzahlen             & $ (\displaystyle\sum_{w_i \in Q} \sqrt{w_i})^2$ &         &         &         &         \\
+    \hline
+    \begin{tabular}{l}$ n = |V|, V \subset W, \forall \omega_i, \omega_k\in V : \omega_i = \omega_k$ \\ (Klein ganz groß)\end{tabular} & $ n \cdot ( 100 - \displaystyle\sum_{i \in I} w_i )$       &         &         &         &         \\
+    \hline
+    \begin{tabular}{l}$ \exists n \in W \setminus \{1\}: \forall i \in A: w_i \in \N_n$ \\ (KniffelXtreme)\end{tabular} & $ n \cdot \displaystyle\sum_{i \in I} w_i $       &         &         &         &         \\
     \hline\hline
-    Gesamt unterer Teil       & $\longrightarrow$                                 &         &         &         &         \\
+    Gesamtsumme unterer Teil       & $\longrightarrow$                                 &         &         &         &         \\
+    \hline
+    Gesamtsumme Vielfache mit Bonus & $\longrightarrow$                                 &         &         &         &         \\
     \hline\hline
     Summe                     &                                                   &         &         &         &         \\
     \hline
 \end{tabular}
-\newline
-\vfill
-\small{v0.2}
+\end{table}
+
+\vspace{10.5cm}
+%\newline\newline\newline
+\noindent Definitionen: %\hspace{234pt} {Name: \rule{4cm}{0.15mm}} 
+\vspace{0.5cm}
+\\
+Ein Würfel kann Augenzahlen aus der Menge $W$ zwischen $1$ und $20$ annehmen. \\
+Es gibt $n = 5$ Würfel mit möglichen Augenzahlen $\omega_i \in W$.\\
+\\
+Es sei\\
+$W := \{1, 2, ..., 19, 20 \}$, \\
+$I :=\{1,...,5\}$  die Menge der Indizes der erwürfelten Augenzahlen $\omega_i \in W$\\
+$P := %\{ p \in \N: p \text{ ist Primzahl} \} \cup \{ 1 \}
+ \{ 1,2,3,5,7,11,13,17,19\}$, die Menge der Primzahlen bis $20$
+\\
+$\N_k := \{ a \in W|\hspace{2pt} \exists b \in \N: a = k\cdot b \}$ \\
+%$anz: W \rightarrow A, anz(n) \mapsto \displaystyle\sum_{i \in A, w_i = n} 1$ \\
+$Q := \{ a \in W | \hspace{2pt}\exists b \in W: a = b^2 \} $\\
+\\
+$n! := \displaystyle\prod_{k=1}^{n}k = 1 \cdot 2 ... \cdot n$\\
+\\\\
+$ggT(W) := $ größter gemeinsamer Teiler aller gewürfelten Augenzahlen\\
+\\
+Augensumme $:= \displaystyle\sum_{i\in I}\omega_i$
+\newline\newline\newline
+\vspace{0.5cm}\\
+%\newline\newline\newline
+\noindent Beispiele: %\hspace{234pt} {Name: \rule{4cm}{0.15mm}} 
+\vspace{0.5cm}
+\begin{enumerate}
+\item Vielfache von 3: $( 1,5, 6, 9, 15 )$ ergibt $ 6 + 9 +15 = 30 $ 
+\item Primzahlen: doppelte Augensumme, wenn alle Augenzahlen prim \\
+             $( 1,5, 7, 17, 19 )$ ergibt $2\cdot(1+5+7+17+19) = 98 $
+\item Zweierpasch : Augensumme, 
+                    wenn mindestens zwei geiche Augenzahlen im Wurf\\
+                     $( 3,15,17,17,19 )$ ergibt $(3+15+17+17+19) = 71 $
+\item Dreierpasch : Augensumme, 
+                    wenn mindestens drei geiche Augenzahlen im Wurf\\
+                     $( 15,17,17,17,19 )$ ergibt $(15+17+17+17+19) = 85 $
+\item Straße : $n=3$, $4$ oder $5$ aufeinanderfolgende Augenzahlen\\
+                $180$ Punkte für $n=3: ( 3,15,16,17,19 )$ \\   
+                $240$ Punkte für $n=4: ( 3,15,16,17,18 )$ \\   
+                $400$ Punkte für $n=5: ( 1,2,3,4,5 )$ 
+\item Wachstumsfolge über mindestens $n=3$ beteiligte Würfel\\
+       $n=3:$ Wurf enthält $(3,4,7), 3\cdot (20 + (3+4+7)) = 3\cdot (20+14)= 102 $\\
+       $n=4:$ Wurf enthält $(1,3,4,7), 4\cdot (20 + (1+3+4+7)) = 4\cdot (20+15)= 140 $\\
+       $n=5:$ Wurf ist   $(1,3,4,7,11), 5\cdot (20 + (1+3+4+7+11)) = 5\cdot (20+26)=230$
+\item Quadratzahlen - die Summe der Wurzeln der Quadratzahlen wird quadriert\\
+       z.B. $(1,4,9,16,19)$, nur $(1,4,9,16)$ zählen: $(1 + 2 + 3 +4)^2=10^2=100$
+\item Klein ganz groß, $n$ ist die Anzahl der augenzahlgleichen Würfel\\
+       z.B. $(1,1,1,1,1)$ ergibt $n=5$ und damit 
+       $n\cdot (100 - Augensumme)=5\cdot(100-5)=475$\\
+       oder $(1,1,3,17,20)$ ergibt $n=2$ und damit $2\cdot(100-(1+1+3+17+20))=
+       2\cdot(100-42)=116$
+\item KniffelXtreme: Augensumme mal $ggT(W)\geq 2$\\
+       z.B. $(20,20,20,20,20)$ ergibt $ggT(W)=20$ und damit 
+       $20\cdot (20+20+20+20+20)=20\cdot(100)=2000$\\
+       Achtung: $(1,1,1,1,1)$ ergibt $ggT(W)=1$ und darf damit nicht gewertet werden ! 
+\end{enumerate}
 
 
 \end{document}
